@@ -1,0 +1,205 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日语(日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#include ""res\\thbgmChg2.rc2""  // Microsoft Visual C++ ???撥????橮?録?\r\n"
+    "#include ""afxres.rc""     // ????壄録???\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\thbgmChg2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_THBGMCHG2_DIALOG DIALOGEX 0, 0, 319, 281
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "搶曽僔儕乕僘BGM擖傟懼偊僣乕儖"
+FONT 9, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "廔椆",IDOK,272,7,40,16
+    LTEXT           "僨乕僞僼傽僀儖 (thXX.dat)",IDC_STATIC,7,7,67,8
+    EDITTEXT        IDC_EDIT_DAT_PATH,16,18,193,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "奐偔",IDC_BUTTON_DAT_OPEN,214,17,32,14
+    LTEXT           "BGM僨乕僞 (thbgm.dat)",IDC_STATIC,7,37,66,8
+    EDITTEXT        IDC_EDIT_BGM_PATH,16,48,193,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "奐偔",IDC_BUTTON_BGM_OPEN,214,48,32,14
+    PUSHBUTTON      "夝愅",IDC_BUTTON_DAT_CHK,16,70,50,14
+    LTEXT           "嬋堦棗",IDC_STATIC,7,92,22,8
+    LISTBOX         IDC_LIST_BGM,14,105,119,89,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "擖傟懼偊傞WAV僼傽僀儖 乮枹擖椡偱尨嬋偺傑傑乯",IDC_STATIC,139,105,130,8
+    EDITTEXT        IDC_EDIT_CHG_WAV,138,117,140,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "奐偔",IDC_BUTTON_WAV_OPEN,280,117,32,14
+    LTEXT           "儖乕僾奐巒揰",IDC_STATIC,139,135,38,8
+    EDITTEXT        IDC_EDIT_LOOP,138,147,45,14,ES_AUTOHSCROLL
+    LTEXT           "昩",IDC_STATIC,186,150,8,8
+    LTEXT           "嬋廔揰",IDC_STATIC,139,165,22,8
+    EDITTEXT        IDC_EDIT_END,138,177,45,14,ES_AUTOHSCROLL
+    LTEXT           "昩",IDC_STATIC,186,180,8,8
+    LTEXT           "僨乕僞曐懚愭 (仸僎乕儉僀儞僗僩乕儖僼僅儖僟偼巜掕偟側偄偱偔偩偝偄)",IDC_STATIC,7,206,180,8
+    EDITTEXT        IDC_EDIT_SAVE_PATH,16,216,193,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "奐偔",IDC_BUTTON_SAVE_OPEN,214,215,32,14
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,7,260,250,14
+    PUSHBUTTON      "僉儍儞僙儖",IDC_BUTTON_CAN,262,260,50,14
+    PUSHBUTTON      "僨乕僞嶌惉",IDC_BUTTON_CREATE,17,237,50,14
+    CONTROL         "搶曽峠杺嫿偑懳徾",IDC_CHECK_KOUMA,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,83,35,70,10
+    CONTROL         "搶曽拁壒婡梡偺嬋柤僼傽僀儖傕嶌惉偡傞",IDC_CHECK_BGMFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,239,126,10
+    CONTROL         "16恑儌乕僪乮BYTE扨埵乯",IDC_CHECK_16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,217,134,83,10
+    EDITTEXT        IDC_EDIT_LOOP2,215,147,77,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_END2,215,177,77,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_INI DIALOGEX 0, 0, 251, 101
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "搶曽僔儕乕僘BGM擖傟懼偊僣乕儖"
+FONT 14, "Microsoft Sans Serif", 700, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "摨堄偡傞",IDOK,65,80,50,14
+    PUSHBUTTON      "摨堄偟側偄",IDCANCEL,136,80,50,14
+    EDITTEXT        IDC_EDIT_INI,7,26,237,51,ES_MULTILINE | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_INI1,7,7,237,14,ES_CENTER | ES_READONLY | NOT WS_BORDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,2,0,0
+ PRODUCTVERSION 2,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "FileDescription", "thbgmChg2"
+            VALUE "FileVersion", "2.2.0.0"
+            VALUE "InternalName", "thbgmChg2.exe"
+            VALUE "OriginalFilename", "thbgmChg2.exe"
+            VALUE "ProductName", "thbgmChg2"
+            VALUE "ProductVersion", "2.2.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_THBGMCHG2_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 274
+    END
+
+    IDD_DIALOG_INI, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 日语(日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE 17, 1
+#pragma code_page(932)
+#include "res\thbgmChg2.rc2"  // Microsoft Visual C++ 以外で編集されたリソース
+#include "afxres.rc"     // 標準コンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
