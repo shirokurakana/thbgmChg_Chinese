@@ -54,44 +54,6 @@ END
 
 #endif    // APSTUDIO_INVOKED
 
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Version
-//
-
-VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,2,0,0
- PRODUCTVERSION 2,2,0,0
- FILEFLAGSMASK 0x3fL
-#ifdef _DEBUG
- FILEFLAGS 0x1L
-#else
- FILEFLAGS 0x0L
-#endif
- FILEOS 0x4L
- FILETYPE 0x1L
- FILESUBTYPE 0x0L
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "080403a4"
-        BEGIN
-            VALUE "CompanyName", "楁巕"
-            VALUE "FileDescription", "thbgmChg2"
-            VALUE "FileVersion", "2.2.0.0"
-            VALUE "InternalName", "thbgmChg2.exe"
-            VALUE "OriginalFilename", "thbgmChg2.exe"
-            VALUE "ProductName", "thbgmChg2"
-            VALUE "ProductVersion", "2.2.0.0"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x804, 932
-    END
-END
-
 #endif    // 日语(日本) resources
 /////////////////////////////////////////////////////////////////////////////
 
@@ -164,6 +126,44 @@ BEGIN
     PUSHBUTTON      "不同意",IDCANCEL,136,80,50,14
     EDITTEXT        IDC_EDIT_INI,7,26,237,51,ES_MULTILINE | ES_READONLY | NOT WS_BORDER
     EDITTEXT        IDC_EDIT_INI1,7,7,237,14,ES_CENTER | ES_READONLY | NOT WS_BORDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,2,0,0
+ PRODUCTVERSION 2,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a4"
+        BEGIN
+            VALUE "CompanyName", "玲子"
+            VALUE "FileDescription", "thbgmChg2"
+            VALUE "FileVersion", "2.2.0.0"
+            VALUE "InternalName", "thbgmChg2.exe"
+            VALUE "OriginalFilename", "thbgmChg2.exe"
+            VALUE "ProductName", "thbgmChg2"
+            VALUE "ProductVersion", "2.2.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 932
+    END
 END
 
 
