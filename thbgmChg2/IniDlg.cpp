@@ -43,7 +43,7 @@ BOOL CIniDlg::OnInitDialog()
 
 	// TODO:  ここに初期化を追加してください
 	m_strIni1 = L"※注意※";
-	m_strIni = L"このツールは上海アリス幻樂団（神主様）とは一切関係ありません。\r\nこのツールに関することを上海アリス幻樂団（神主様）に問い合わせることは一切行わないでください。\r\n\r\n利用は自己責任でお願いします。";
+	m_strIni = L"此工具与上海爱丽丝幻乐团（ZUN）没有任何关系。\r\n请不要问上海爱丽丝幻乐团（ZUN）有关于此工具的任何事情。\r\n\r\n使用风险自负。";
 	UpdateData(FALSE);
 
 	return TRUE;  // return TRUE unless you set the focus to a control

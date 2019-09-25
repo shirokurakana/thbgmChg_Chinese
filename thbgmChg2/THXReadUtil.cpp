@@ -498,7 +498,7 @@ void CTHXReadUtil::bitstrm_read_th06_string(bitstrm *strm, string* str)
 	}while(c != 0 );
 }
 
-void CTHXReadUtil::bitstrm_write(struct bitstrm *strm, int val,unsigned int bits)
+void CTHXReadUtil::bitstrm_write(bitstrm *strm, int val,unsigned int bits)
 {
 	int ret = 0;
 	unsigned int i;

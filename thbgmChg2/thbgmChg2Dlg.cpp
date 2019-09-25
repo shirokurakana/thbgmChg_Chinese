@@ -151,8 +151,8 @@ void CthbgmChg2Dlg::OnBnClickedButtonDatOpen()
 	memset(&ofn, 0, sizeof(OPENFILENAME));
 	ofn.lStructSize = sizeof (OPENFILENAME);
 	ofn.hwndOwner = m_hWnd;
-	ofn.lpstrFilter = 	TEXT("dat files (*.dat)\0*.dat\0")
-					TEXT("All files (*.*)\0*.*\0\0");
+	ofn.lpstrFilter = 	TEXT("dat文件 (*.dat)\0*.dat\0")
+					TEXT("所有文件 (*.*)\0*.*\0\0");
 	ofn.lpstrFile = strFile;
 	ofn.nMaxFile = MAX_PATH;
 	ofn.Flags = OFN_FILEMUSTEXIST;
@@ -173,8 +173,8 @@ void CthbgmChg2Dlg::OnBnClickedButtonBgmOpen()
 		memset(&ofn, 0, sizeof(OPENFILENAME));
 		ofn.lStructSize = sizeof (OPENFILENAME);
 		ofn.hwndOwner = m_hWnd;
-		ofn.lpstrFilter = 	TEXT("dat files (*.dat)\0*.dat\0")
-						TEXT("All files (*.*)\0*.*\0\0");
+		ofn.lpstrFilter = 	TEXT("dat文件 (*.dat)\0*.dat\0")
+						TEXT("所有文件 (*.*)\0*.*\0\0");
 		ofn.lpstrFile = strFile;
 		ofn.nMaxFile = MAX_PATH;
 		ofn.Flags = OFN_FILEMUSTEXIST;
@@ -205,7 +205,7 @@ void CthbgmChg2Dlg::OnBnClickedButtonBgmOpen()
 		bi.hwndOwner = m_hWnd;
 		bi.pidlRoot = pidlRoot;
 		bi.pszDisplayName = lpBuffer;
-		bi.lpszTitle = L"BGMフォルダを選択してください";
+		bi.lpszTitle = L"请选择BGM文件夹";
 		bi.ulFlags = 0;
 		bi.lpfn = NULL;
 		bi.lParam = (LPARAM)m_strBgmPath.GetBuffer(0);
@@ -235,8 +235,8 @@ void CthbgmChg2Dlg::OnBnClickedButtonWavOpen()
 	memset(&ofn, 0, sizeof(OPENFILENAME));
 	ofn.lStructSize = sizeof (OPENFILENAME);
 	ofn.hwndOwner = m_hWnd;
-	ofn.lpstrFilter = 	TEXT("wav files (*.wav)\0*.wav\0")
-					TEXT("All files (*.*)\0*.*\0\0");
+	ofn.lpstrFilter = 	TEXT("wav文件 (*.wav)\0*.wav\0")
+					TEXT("所有文件 (*.*)\0*.*\0\0");
 	ofn.lpstrFile = strFile;
 	ofn.nMaxFile = MAX_PATH;
 	ofn.Flags = OFN_FILEMUSTEXIST;
@@ -292,7 +292,7 @@ void CthbgmChg2Dlg::OnBnClickedButtonSaveOpen()
 	bi.hwndOwner = m_hWnd;
 	bi.pidlRoot = pidlRoot;
 	bi.pszDisplayName = lpBuffer;
-	bi.lpszTitle = L"データ保存フォルダを選択してください";
+	bi.lpszTitle = L"请选择输出文件夹";
 	bi.ulFlags = 0;
 	bi.lpfn = NULL;
 	bi.lParam = (LPARAM)m_strSavePath.GetBuffer(0);
@@ -363,16 +363,16 @@ void CthbgmChg2Dlg::OnBnClickedButtonDatChk()
 	m_cListBgm.ResetContent();
 
 	if( m_cRead.LoadDataFile(m_strDataPath.GetBuffer(0)) == FALSE ){
-		MessageBox(L"ファイルのロードに失敗しました");
+		MessageBox(L"无法加载文件");
 		return ;
 	}
 	if( m_cRead.LoadBgmData(&BgmList) == FALSE ){
-		MessageBox(L"ファイルのロードに失敗しました");
+		MessageBox(L"无法加载文件");
 		return ;
 	}
 
 	if( BgmList.size() == 0 ){
-		MessageBox(L"ファイルのロードに失敗しました");
+		MessageBox(L"无法加载文件");
 		return ;
 	}
 
@@ -406,7 +406,7 @@ void CthbgmChg2Dlg::OnBnClickedButtonCreate()
 	// TODO: ここにコントロール通知ハンドラ コードを追加します。
 	UpdateData(TRUE);
 	if( m_strDataPath.IsEmpty() == true || m_strSavePath.IsEmpty() == true || m_strBgmPath.IsEmpty() == true){
-		MessageBox(L"保存先が指定されていません");
+		MessageBox(L"未选择保存文件夹");
 		return ;
 	}
 
@@ -526,7 +526,7 @@ BOOL CthbgmChg2Dlg::CheckData()
 		if( BgmList[i].strWaveFile.empty() != true ){
 			HANDLE hFile = CreateFile( BgmList[i].strWaveFile.c_str(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL );
 			if( hFile == INVALID_HANDLE_VALUE ){
-				MessageBox(L"wavファイルが見つかりませんでした");
+				MessageBox(L"找不到wav文件");
 				return FALSE;
 			}
 			DWORD dwL = GetFileSize(hFile,NULL);
@@ -554,7 +554,7 @@ BOOL CthbgmChg2Dlg::CheckData()
 			strSrc+=strA;
 			HANDLE hFile = CreateFileW( strSrc, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL );
 			if( hFile == INVALID_HANDLE_VALUE ){
-				MessageBox(L"ファイルが見つかりませんでした");
+				MessageBox(L"找不到文件");
 				return FALSE;
 			}
 			CloseHandle(hFile);
@@ -786,7 +786,7 @@ UINT CthbgmChg2Dlg::CreateBgmWaitThread(LPVOID pParam)
 		}
 
 		DWORD dwWrite;
-		CStringA strWrite="@,カスタムデータ\r\n";
+		CStringA strWrite="@,custom data\r\n";
 		WriteFile(hFile,strWrite.GetBuffer(0), strWrite.GetLength(), &dwWrite, NULL );
 		for(int i=0; i<(int)pSys->BgmList.size(); i++ ){
 			if( pSys->m_bKouma == FALSE ){
@@ -839,13 +839,13 @@ LRESULT CthbgmChg2Dlg::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 {
 	// TODO: ここに特定なコードを追加するか、もしくは基本クラスを呼び出してください。
 	if( message == WM_USER+100 ){
-		MessageBox(L"終了しました");
+		MessageBox(L"已完成");
 		EnableItemChk();
 	}else if( message == WM_USER+101 ){
-		MessageBox(L"エラーが発生したので中止します");
+		MessageBox(L"有错误发生，已终止");
 		EnableItemChk();
 	}else if( message == WM_USER+102){
-		MessageBox(L"キャンセルされました");
+		MessageBox(L"已取消");
 	}
 
 	if(message>= WM_USER+100 && message<= WM_USER+102){
